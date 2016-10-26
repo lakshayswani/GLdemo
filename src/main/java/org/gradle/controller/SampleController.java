@@ -39,5 +39,9 @@ public class SampleController {
     	return users;
     }
     
-
+    @GetMapping("/Hello")
+    public String addUser1(Model model) {
+        model.addAttribute("user", new User());
+        return "Hello.jsp";
+    }
 }
